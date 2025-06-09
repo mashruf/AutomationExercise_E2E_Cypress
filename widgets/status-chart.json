@@ -1,1 +1,1 @@
-[{"uid":"2cd237247277301c","name":"User should be able to login using valid credentials","time":{"start":1749447202029,"stop":1749447214360,"duration":12331},"status":"passed","severity":"normal"}]
+[{"uid":"104946b27eb7ec8a","name":"User should be able signup, verify account and delete it","time":{"start":1749476428059,"stop":1749476437142,"duration":9083},"status":"passed","severity":"normal"}]
