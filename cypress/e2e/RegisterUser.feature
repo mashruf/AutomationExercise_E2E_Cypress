@@ -1,6 +1,6 @@
 Feature: Register User
 
-    Scenario: User should be able signup, verify account and delete it
+    Scenario: User should be able to signup, verify account and delete it
         Given I launch the browser and navigate to "https://automationexercise.com"
         Then I should see the home page
         When I click on Signup or Login button

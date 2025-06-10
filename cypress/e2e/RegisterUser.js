@@ -1,9 +1,10 @@
 /// <reference types="cypress" />
 import { faker } from '@faker-js/faker';
 
-const email = faker.internet.email();
 import { Given,When,Then } from "@badeball/cypress-cucumber-preprocessor";
- 
+const email = faker.internet.email();
+const name = "John";
+
 Given("I launch the browser and navigate to {string}",(url)=>{
     cy.visit(url);
 })
@@ -21,7 +22,7 @@ Then('I should see New User Signup! text',()=>{
 })
 
 When("I enter name and email",()=>{
-    cy.get("input[placeholder='Name']").type("John");
+    cy.get("input[placeholder='Name']").type(name);
     cy.get("input[data-qa='signup-email']").type(email);
 })
 
@@ -68,7 +69,7 @@ Then('I should see ACCOUNT CREATED! text',()=>{
 })
 
 When('I click on Continue button',()=>{
-    cy.get(".btn.btn-primary").click()
+    cy.get(".btn.btn-primary").click();
 })
 
 Then('I should see Logged in as Username text',()=>{
