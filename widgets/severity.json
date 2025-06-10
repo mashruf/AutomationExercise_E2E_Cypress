@@ -1,1 +1,1 @@
-[{"uid":"541306d18a045f76","name":"User should be able signup, verify account and delete it","time":{"start":1749551274557,"stop":1749551283674,"duration":9117},"status":"passed","severity":"normal"}]
+[{"uid":"fe147c1bd44950d0","name":"User should be able to signup, verify account and delete it","time":{"start":1749559861182,"stop":1749559881540,"duration":20358},"status":"passed","severity":"normal"}]
