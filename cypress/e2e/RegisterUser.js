@@ -35,7 +35,6 @@ Then('I should see ENTER ACCOUNT INFORMATION text',()=>{
 
 When("I fill account details",()=>{
     cy.get("#id_gender1").check();
-    cy.get("#name").type("John");
     cy.get("#password").type(1234);
     cy.get("#days").select(1);
     cy.get("#months").select("January");
@@ -72,8 +71,8 @@ When('I click on Continue button',()=>{
     cy.get(".btn.btn-primary").click()
 })
 
-Then('I should see Logged in as TestUser text',()=>{
-    cy.get("li:nth-child(10) a:nth-child(1)").should("contain","Logged in as JohnJohn");
+Then('I should see Logged in as Username text',()=>{
+    cy.get("li:nth-child(10) a:nth-child(1)").should("contain","Logged in as John");
 })
 
 When('I click on Delete Account button',()=>{

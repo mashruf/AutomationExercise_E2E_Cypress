@@ -14,7 +14,7 @@ Feature: Register User
         And I click on Create Account button
         Then I should see ACCOUNT CREATED! text
         When I click on Continue button
-        Then I should see Logged in as TestUser text
+        Then I should see Logged in as Username text
         When I click on Delete Account button
         Then I should see ACCOUNT DELETED! text and click Continue button
     
