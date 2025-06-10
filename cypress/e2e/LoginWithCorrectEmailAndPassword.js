@@ -1,9 +1,9 @@
-import Login from "../../PageObjectModel/login.js";
+import LoginOrSignup from "../../PageObjectModel/loginOrSignup.js";
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 /// <reference types="cypress" />
 
-const ln = new Login();
+const ln = new LoginOrSignup();
 
 Given("I launch the browser and navigate to {string}",(url)=>{
     cy.visit(url);
