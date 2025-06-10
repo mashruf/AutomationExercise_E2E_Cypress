@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Jun 10 07:29:13 UTC 2025","Tue Jun 10 07:29:24 UTC 2025","10212","Register User","","","","","User should be able signup, verify account and delete it",""
+"passed","Tue Jun 10 10:27:54 UTC 2025","Tue Jun 10 10:28:03 UTC 2025","9117","Register User","","","","","User should be able signup, verify account and delete it",""
