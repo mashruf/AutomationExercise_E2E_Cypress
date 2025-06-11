@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Jun 10 14:38:27 UTC 2025","Tue Jun 10 14:38:30 UTC 2025","2916","Login User with correct email and password","","","","","User should not be able to login using incorrect email and password",""
-"passed","Tue Jun 10 14:38:13 UTC 2025","Tue Jun 10 14:38:24 UTC 2025","10958","Login User with correct email and password","","","","","User should be able to login using correct email and password, verify login and delete it",""
-"passed","Tue Jun 10 14:38:33 UTC 2025","Tue Jun 10 14:38:41 UTC 2025","8032","Register User","","","","","User should be able to signup, verify account and delete it",""
+"passed","Wed Jun 11 08:40:33 UTC 2025","Wed Jun 11 08:40:38 UTC 2025","4196","Login User with correct email and password","","","","","User should not be able to login using incorrect email and password",""
+"passed","Wed Jun 11 08:40:41 UTC 2025","Wed Jun 11 08:40:51 UTC 2025","9932","Register User","","","","","User should be able to signup, verify account and delete it",""
+"passed","Wed Jun 11 08:40:54 UTC 2025","Wed Jun 11 08:41:04 UTC 2025","9107","Login User with correct email and password","","","","","User should be able to login using correct email and password, verify login and delete it",""
