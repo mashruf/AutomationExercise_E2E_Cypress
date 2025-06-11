@@ -17,6 +17,10 @@ class LoginOrSignup{
         cy.get(".login-form").should("contain","Login to your account");
     }
 
+    signupPageVisible(){
+        cy.get(".signup-form").should("contain","New User Signup!");
+    }
+
     createNewUser() {
         cy.get("input[placeholder='Name']").type(this.name);
         cy.get("input[data-qa='signup-email']").type(this.email);
