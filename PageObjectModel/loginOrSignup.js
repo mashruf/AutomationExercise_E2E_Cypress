@@ -13,6 +13,10 @@ class LoginOrSignup{
         cy.contains(".nav.navbar-nav>li", " Signup / Login").click();
     }
 
+    loginPageVisible(){
+        cy.get(".login-form").should("contain","Login to your account");
+    }
+
     createNewUser() {
         cy.get("input[placeholder='Name']").type(this.name);
         cy.get("input[data-qa='signup-email']").type(this.email);
@@ -45,6 +49,13 @@ class LoginOrSignup{
         cy.get("button[data-qa='login-button']").click();
     }
 
+    loginAsUsername(){
+        cy.get("li:nth-child(10) a:nth-child(1)").should("contain","Logged in as "+this.name);
+    }
+ 
+    logout(){
+        cy.contains(".nav.navbar-nav>li","Logout").click();
+    }
 
 }
 
