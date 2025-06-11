@@ -18,7 +18,7 @@ When("I click on Login or Signup button",()=>{
 })
 
 Then("I shold see Login to your account is visible",()=>{
-    cy.get(".login-form").should("contain","Login to your account");
+    ln.loginPageVisible();
 })
 
 When("I enter incorrect email address and password",()=>{
