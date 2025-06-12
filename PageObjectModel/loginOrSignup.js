@@ -71,6 +71,20 @@ class LoginOrSignup{
         cy.contains(".nav.navbar-nav>li","Logout").click();
     }
 
+    //click on products
+    clickProducts(){
+        cy.contains(".nav.navbar-nav>li","Products").click();
+    }
+
+    //verify nevigation to all products page successfull
+    navigatedToAllProducts(){
+        cy.get(".title.text-center").should("contain","All Products");
+    }
+
+    //navigate to product detail page
+    viewDetail(){
+        cy.get("a[href='/product_details/1']").click();
+    }
 }
 
 export default LoginOrSignup;
