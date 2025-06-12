@@ -1,6 +1,6 @@
 Feature: Contact Us Form
 
-    Scenario: User will be able to fill the Contact Us form and submit it
+    Scenario: User should be able to fill the Contact Us form and submit it
 
         Given I launch the browser and navigate to "https://automationexercise.com"
         Then I should see the homepage
