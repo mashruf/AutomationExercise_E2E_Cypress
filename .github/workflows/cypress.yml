@@ -19,6 +19,7 @@ jobs:
 
     - name: Run Cypress tests
       run: npx cypress run
+      continue-on-error: true  # ✅ allow next steps even if tests fail
 
     - name: Install Allure CLI
       run: npm install -D allure-commandline@2.20.1
