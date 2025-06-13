@@ -1,10 +1,10 @@
 name: Cypress End-to-end tests
 
-on: 
+on:
   push:
 
 jobs:
-  cypress-run:  
+  cypress-run:
     runs-on: ubuntu-24.04
 
     steps:
@@ -14,7 +14,8 @@ jobs:
       with:
         node-version: '18'
 
-    - run: npm ci
+    - name: Install dependencies
+      run: npm ci
 
     - name: Run Cypress tests
       run: npx cypress run
@@ -30,5 +31,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./allure-report
-
-
