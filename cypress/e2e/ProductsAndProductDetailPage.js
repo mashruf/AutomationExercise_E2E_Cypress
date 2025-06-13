@@ -28,7 +28,7 @@ Then("I should see the product list",()=>{
 })
 
 When("I click on View Product of first product",()=>{
-    rt.viewDetail();
+    rt.viewDetail("Blue Top");
 })
 
 Then("I should navigated to product detail page",()=>{

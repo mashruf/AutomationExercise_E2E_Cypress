@@ -18,6 +18,7 @@
     "cypress-file-upload": "^5.0.8"
   },
   "dependencies": {
-    "@faker-js/faker": "^9.8.0"
+    "@faker-js/faker": "^9.8.0",
+    "cypress-real-events": "^1.14.0"
   }
 }

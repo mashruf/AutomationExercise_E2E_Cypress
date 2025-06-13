@@ -82,8 +82,33 @@ class Repeatative{
     }
 
     //navigate to product detail page
-    viewDetail(){
-        cy.get("a[href='/product_details/1']").click();
+    viewDetail(productName){
+        cy.contains(".features_items>.col-sm-4",productName).within(()=>{
+            cy.get(".choose>.nav>li>a").click();
+        })
+    }
+
+    //add product to cart
+    addProductToCart(productName){
+        cy.contains(".features_items>.col-sm-4",productName).realHover().within(()=>{
+            cy.get(".product-overlay>.overlay-content>a").click();
+        })
+        
+    }
+
+    //click continue shopping button after adding product to card
+    continueShopping(){
+        cy.get(".btn.btn-success.close-modal.btn-block").click();
+    }
+
+    //click view cart on modal
+    viewCart(){
+        cy.get(".modal-content>.modal-body>p>a").click();
+    }
+
+    productAddedToCart(length){
+        cy.get(".btn.btn-default.check_out").should("be.visible");
+        cy.get("tbody>tr").should("have.length",length);
     }
 }
 
