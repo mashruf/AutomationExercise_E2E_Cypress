@@ -1,24 +1,23 @@
-import LoginOrSignup from "../../PageObjectModel/loginOrSignup.js";
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-
+import Repeatative from "../../PageObjectModel/repeatative.js";
 /// <reference types="cypress" />
 
-const ln = new LoginOrSignup();
+const rt = new Repeatative();
 
 Given("I launch the browser and navigate to {string}",(url)=>{
     cy.visit(url);
 })
 
 Then("I should see the homepage",()=>{
-    ln.homePageVisible();
+    rt.homePageVisible();
 })
 
 When("I click on Login or Signup button",()=>{
-    ln.clickLoginOrSignup();
+    rt.clickLoginOrSignup();
 })
 
 Then("I shold see Login to your account is visible",()=>{
-    ln.loginPageVisible();
+    rt.loginPageVisible();
 })
 
 When("I enter incorrect email address and password",()=>{
@@ -27,7 +26,7 @@ When("I enter incorrect email address and password",()=>{
 })
 
 When("I click login button",()=>{
-    ln.clickLoginButton();
+    rt.clickLoginButton();
 })
 
 Then("I should see Your email or password is incorrect! is visible",()=>{

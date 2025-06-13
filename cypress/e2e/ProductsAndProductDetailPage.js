@@ -1,25 +1,25 @@
 /// <reference types="cypress" />
 
-import LoginOrSignup from "../../PageObjectModel/loginOrSignup.js";
+import Repeatative from "../../PageObjectModel/repeatative.js";
 
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
-const ln = new LoginOrSignup();
+const rt = new Repeatative();
 Given("I launch the browser and navigate to {string}",(url)=>{
     cy.visit(url);
 })
 
 Then("I should see the homepage",()=>{
-    ln.homePageVisible();
+    rt.homePageVisible();
 })
 
 When("I click on Products button",()=>{
-    ln.clickProducts();
+    rt.clickProducts();
 })
 
 Then("I should navigated to ALL PRODUCTS page",()=>{
-    ln.navigatedToAllProducts();
+    rt.navigatedToAllProducts();
 })
 
 Then("I should see the product list",()=>{
@@ -28,7 +28,7 @@ Then("I should see the product list",()=>{
 })
 
 When("I click on View Product of first product",()=>{
-    ln.viewDetail();
+    rt.viewDetail();
 })
 
 Then("I should navigated to product detail page",()=>{

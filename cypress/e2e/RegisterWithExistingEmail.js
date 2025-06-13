@@ -1,24 +1,24 @@
 /// <reference types="cypress" />
 
-import LoginOrSignup from "../../PageObjectModel/loginOrSignup.js";
+import Repeatative from "../../PageObjectModel/repeatative.js";
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-const ln = new LoginOrSignup();
+const rt = new Repeatative();
 
 Given("I launch the browser and navigate to {string}",(url)=>{
     cy.visit(url);
 })
 
 Then("I should see the homepage",()=>{
-    ln.homePageVisible();
+    rt.homePageVisible();
 })
 
 When("I click on Login or Signup button",()=>{
-    ln.clickLoginOrSignup();
+    rt.clickLoginOrSignup();
 })
 
 Then("I should see New User Signup! text",()=>{
-    ln.signupPageVisible();
+    rt.signupPageVisible();
 })
 
 When("I enter name and already registered email address",()=>{

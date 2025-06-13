@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import LoginOrSignup from "../../PageObjectModel/loginOrSignup.js";
+import Repeatative from "../../PageObjectModel/repeatative.js";
 
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
@@ -8,14 +8,14 @@ import { faker } from "@faker-js/faker";
 const subject = faker.lorem.sentence();
 const message = faker.lorem.paragraph();
 
-const ln = new LoginOrSignup();
+const rt = new Repeatative();
 
 Given("I launch the browser and navigate to {string}",(url)=>{
     cy.visit(url);
 })
 
 Then("I should see the homepage",()=>{
-    ln.homePageVisible();
+    rt.homePageVisible();
 })
 
 When("I click on Contact Us button",()=>{
@@ -27,8 +27,8 @@ Then("I should see GET IN TOUCH",()=>{
 })
 
 When("I enter name, email, subject and message",()=>{
-    cy.get("input[placeholder='Name']").type(ln.name);
-    cy.get("input[placeholder='Email']").type(ln.email);
+    cy.get("input[placeholder='Name']").type(rt.name);
+    cy.get("input[placeholder='Email']").type(rt.email);
     cy.get("input[placeholder='Subject']").type(subject);
     cy.get("#message").type(message);
 })
@@ -56,5 +56,5 @@ When("I click Home button",()=>{
 })
 
 Then("I should redirected to homepage",()=>{
-    ln.homePageVisible();
+    rt.homePageVisible();
 })
