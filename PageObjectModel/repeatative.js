@@ -91,8 +91,9 @@ class Repeatative{
     //add product to cart
     addProductToCart(productName){
         cy.contains(".features_items>.col-sm-4",productName).realHover().within(()=>{
-            cy.get(".product-overlay>.overlay-content>a").click();
+            cy.get(".product-overlay>.overlay-content>a").click({ waitForAnimations: false });
         })
+        
         
     }
 
