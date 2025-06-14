@@ -1,7 +1,11 @@
 /// <reference types="cypress" />
 import { faker } from '@faker-js/faker';
 
+import Repeatative from '../../PageObjectModel/repeatative.js';
+
 import { Given,When,Then } from "@badeball/cypress-cucumber-preprocessor";
+
+const rt = new Repeatative();
 const email = faker.internet.email();
 const name = "John";
 
@@ -77,11 +81,10 @@ Then('I should see Logged in as Username text',()=>{
 })
 
 When('I click on Delete Account button',()=>{
-    cy.get("a[href='/delete_account']").click();
+    rt.deleteAccount();
 })
 
 Then('I should see ACCOUNT DELETED! text and click Continue button',()=>{
-    cy.get("h2[class='title text-center'] b").should("contain","Account Deleted!");
-    cy.get(".btn.btn-primary").click();
+    rt.confirmAccountDeletation();
 })
 
