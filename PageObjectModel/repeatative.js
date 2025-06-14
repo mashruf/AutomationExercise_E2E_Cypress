@@ -104,6 +104,11 @@ class Repeatative {
         cy.get(".product-details").find("h2").should("contain", this.productName);
     }
 
+    //go to cart
+    visitCard(){
+        cy.contains(".nav.navbar-nav>li", "Cart").click();
+    }
+
     //add product to cart
     addProductToCart(productName) {
         cy.contains(".features_items>.col-sm-4", productName).realHover().within(() => {
