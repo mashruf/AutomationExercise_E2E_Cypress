@@ -83,9 +83,15 @@ class Repeatative{
 
     //navigate to product detail page
     viewDetail(productName){
+        this.productName = productName;
         cy.contains(".features_items>.col-sm-4",productName).within(()=>{
             cy.get(".choose>.nav>li>a").click();
         })
+    }
+
+    //specific product details page visible or not 
+    productDetailVisible(){
+        cy.get(".product-details").find("h2").should("contain",this.productName);
     }
 
     //add product to cart
