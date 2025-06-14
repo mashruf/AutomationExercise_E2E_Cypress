@@ -49,6 +49,16 @@ class Repeatative {
         cy.get("button[data-qa='create-account']").click();
     }
 
+    //successful account creation
+    accountCreateSuccess() {
+        cy.get("h2[class='title text-center'] b").should("contain", "Account Created!");
+    }
+
+    //click continue after account creation
+    continue() {
+        cy.get(".btn.btn-primary").click();
+    }
+
 
     //enter email and password in the login page
     enterEmailAndPassword() {
@@ -105,8 +115,13 @@ class Repeatative {
     }
 
     //go to cart
-    visitCard(){
+    visitCart() {
         cy.contains(".nav.navbar-nav>li", "Cart").click();
+    }
+
+    //Cart is displayed
+    cartDisplayed() {
+        cy.get(".active").should("contain", "Shopping Cart");
     }
 
     //add product to cart
@@ -131,6 +146,44 @@ class Repeatative {
     productAddedToCart(length) {
         cy.get(".btn.btn-default.check_out").should("be.visible");
         cy.get("tbody>tr").should("have.length", length);
+    }
+
+    //proceed to checkout
+    checkout() {
+        cy.get(".btn.btn-default.check_out").click();
+    }
+
+    //verify address details and review order
+    verifyAddressAndReviewOrder() {
+        cy.get(".active").should("contain", "Checkout");
+        cy.contains(".heading", "Address Details").should("be.visible");
+        cy.contains(".heading", "Review Your Order").should("be.visible");
+    }
+
+    //enter comment and place order on checkout
+    enterCommentAndPlaceOrder() {
+        cy.get("textarea[name='message']").type("Please add better protection");
+        cy.get(".btn.btn-default.check_out").click();
+    }
+
+    //enter card details
+    enterCard() {
+        cy.get("input[name='name_on_card']").type("Visa");
+        cy.get("input[name='card_number']").type("123456789101");
+        cy.get("input[placeholder='ex. 311']").type("311");
+        cy.get("input[placeholder='MM']").type("04");
+        cy.get("input[placeholder='YYYY']").type("2029");
+    }
+
+    //pay and confirm button
+    payAndConfirm() {
+        cy.get("#submit").click();
+    }
+
+    //verify order confirmation message
+    orderConfirm() {
+        cy.get(".title").
+        should("contain", "Order Placed!");
     }
 }
 

@@ -69,11 +69,11 @@ When('I click on Create Account button',()=>{
 })
 
 Then('I should see ACCOUNT CREATED! text',()=>{
-    cy.get("h2[class='title text-center'] b").should("contain","Account Created!");
+    rt.accountCreateSuccess();
 })
 
 When('I click on Continue button',()=>{
-    cy.get(".btn.btn-primary").click();
+    rt.continue();
 })
 
 Then('I should see Logged in as Username text',()=>{
