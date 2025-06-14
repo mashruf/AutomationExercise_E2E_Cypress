@@ -37,9 +37,9 @@ Then("I should see Logged in as username is visible",()=>{
 })
 
 When("I click Delete Account button",()=>{
-    cy.get("a[href='/delete_account']").click();
+    rt.deleteAccount();
 })
 
 Then("I should see ACCOUNT DELETED! is visible",()=>{
-    cy.get("h2[class='title text-center'] b").should("contain","Account Deleted!");
+    rt.confirmAccountDeletation();
 })
