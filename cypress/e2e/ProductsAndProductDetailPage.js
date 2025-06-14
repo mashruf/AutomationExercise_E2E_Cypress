@@ -32,11 +32,11 @@ When("I click on View Product of first product",()=>{
 })
 
 Then("I should navigated to product detail page",()=>{
-    cy.url().should("contain","product_details/1");
+    rt.productDetailVisible();
 })
 
 Then("I should see the product name, category, price, availability, condition, brand",()=>{
-    cy.get(".product-information>h2").should("contain","Blue Top");
+    cy.get(".product-information>h2").should("contain",rt.productName);
     cy.get(".product-information>p:nth-child(3)").should("contain","Category: Women > Tops");
     cy.get(".product-information>span").should("contain","Rs. 500");
     cy.get(".product-information>p:nth-child(6)").should("contain","Availability: In Stock");
