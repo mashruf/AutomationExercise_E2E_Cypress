@@ -15,7 +15,10 @@ Then("I should see the homepage",()=>{
 
 When("I click on Login or Signup button",()=>{
     rt.clickLoginOrSignup();
-    rt.createNewUser();//creating new user
+    
+    //creting new user as the user will be deleted at the end of the test
+    //we are adding these codes to create an user and logout
+    rt.createNewUser();
     cy.get(".btn.btn-primary").click();
     cy.contains(".nav.navbar-nav>li","Logout").click();//logging out
 })
