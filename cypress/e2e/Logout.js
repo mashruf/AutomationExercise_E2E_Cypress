@@ -17,9 +17,6 @@ Then("I should see the homepage",()=>{
 
 When("I click on Login or Signup button",()=>{
     rt.clickLoginOrSignup();
-    rt.createNewUser();//creating new user
-    cy.get(".btn.btn-primary").click();
-    cy.contains(".nav.navbar-nav>li","Logout").click();//logging out
 })
 
 Then("I shold see Login to your account is visible",()=>{
@@ -27,7 +24,10 @@ Then("I shold see Login to your account is visible",()=>{
 })
 
 When("I enter correct email address and password",()=>{
-    rt.enterEmailAndPassword();
+    cy.fixture("loginInfo").then((login)=>{
+        cy.get("input[data-qa='login-email']").type(login.email);
+        cy.get("input[data-qa='login-password']").type(login.password);
+    })
 })
 
 When("I click login button",()=>{
@@ -35,7 +35,7 @@ When("I click login button",()=>{
 })
 
 Then("I should see Logged in as username is visible",()=>{
-    rt.loginAsUsername();
+    cy.get("li:nth-child(10) a:nth-child(1)").should("contain", " Logged in as Gloria");
 })
 
 When("I click Logout button",()=>{
