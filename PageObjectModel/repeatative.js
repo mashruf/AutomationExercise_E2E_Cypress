@@ -178,12 +178,14 @@ class Repeatative {
     //pay and confirm button
     payAndConfirm() {
         cy.get("#submit").click();
+        cy.go(-1);
+        
     }
 
     //verify order confirmation message
     orderConfirm() {
-        cy.get(".title").
-        should("contain", "Order Placed!");
+        cy.get("#success_message").
+        should("contain", "Your order has been placed successfully!");
     }
 }
 
