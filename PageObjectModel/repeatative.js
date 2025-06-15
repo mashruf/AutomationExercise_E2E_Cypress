@@ -4,7 +4,7 @@ class Repeatative {
 
     email = faker.internet.email();//creating email for signup
     name = faker.person.firstName();//creating name for user
-    password = 1234;
+    password = "1234";
 
     //verify the homepage is visible
     homePageVisible() {
