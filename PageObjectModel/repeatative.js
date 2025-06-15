@@ -44,8 +44,8 @@ class Repeatative {
         cy.get("#country").select("India");
         cy.get("#state").type("Rajsahi");
         cy.get("#city").type("Rajsahi");
-        cy.get("#zipcode").type(1400);
-        cy.get("#mobile_number").type(1234567890);
+        cy.get("#zipcode").type("1400");
+        cy.get("#mobile_number").type("1234567890");
         cy.get("button[data-qa='create-account']").click();
     }
 
