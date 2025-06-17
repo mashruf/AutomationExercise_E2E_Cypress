@@ -22,14 +22,13 @@ Then("I should be navigated to ALL PRODUCTS page",()=>{
 })
 
 When("I enter product name in search input and click search button",()=>{
-    cy.get("#search_product").type("tshirt");
-    cy.get(".fa.fa-search").click();
+    rt.searchProduct("tshirt");
 })
 
 Then("I should see the SEARCHED PRODUCTS section",()=>{
-    cy.get(".title").should("contain","Searched Products");
+    rt.visibleSearchedProductSection();
 })
 
 Then("I should see all the products related to search",()=>{
-    cy.get(".features_items>.col-sm-4").should("have.length.gte",1);
+    rt.seeAllProductRelatedToSearch();
 })
