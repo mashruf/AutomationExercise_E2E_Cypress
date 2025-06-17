@@ -159,6 +159,7 @@ class Repeatative {
         cy.get(".modal-content>.modal-body>p>a").click();
     }
 
+    //product is added to the cart
     productAddedToCart(length) {
         cy.get(".btn.btn-default.check_out").should("be.visible");
         cy.get("tbody>tr").should("have.length", length);
