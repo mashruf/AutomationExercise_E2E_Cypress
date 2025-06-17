@@ -114,6 +114,22 @@ class Repeatative {
         cy.get(".product-details").find("h2").should("contain", this.productName);
     }
 
+    //search product
+    searchProduct(product) {
+        cy.get("#search_product").type(product);
+        cy.get(".fa.fa-search").click();
+    }
+
+    //verify search product section is visible
+    visibleSearchedProductSection(){
+        cy.get(".title").should("contain","Searched Products");
+    }
+
+    //all products related to search are visible
+    seeAllProductRelatedToSearch(){
+        cy.get(".features_items>.col-sm-4").should("have.length.gte",1);
+    }
+
     //go to cart
     visitCart() {
         cy.contains(".nav.navbar-nav>li", "Cart").click();
@@ -179,13 +195,13 @@ class Repeatative {
     payAndConfirm() {
         cy.get("#submit").click();
         cy.go(-1);
-        
+
     }
 
     //verify order confirmation message
     orderConfirm() {
         cy.get("#success_message").
-        should("contain", "Your order has been placed successfully!");
+            should("contain", "Your order has been placed successfully!");
     }
 }
 
