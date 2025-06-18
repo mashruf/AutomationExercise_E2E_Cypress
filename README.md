@@ -1,6 +1,15 @@
 # E2E Test Suite Using Cypress with Page Object Model and BDD (Gherkin)
 
-This repository contains an end-to-end (E2E) test suite using **Cypress**, written with a **Page Object Model (POM)** and **BDD-style (Gherkin)** feature files to automate test scenarios on [AutomationExercise.com](https://automationexercise.com/).
+This repository contains an end-to-end (E2E) test suite using **Cypress**, written with a **Page Object Model (POM)** and **BDD-style (Gherkin)** feature files to automate test scenarios on [AutomationExercise.com](https://automationexercise.com/). The project is integrated with GitHub Actions to enable continuous integration, automatically running tests on every push and pull request to ensure code quality and reliability.
+
+---
+
+## Tech Stack
+
+- Cypress
+- Cucumber Preprocessor (Gherkin syntax)
+- JavaScript
+- GitHub Actions for CI/CD
 
 ---
 
@@ -29,4 +38,39 @@ This repository contains an end-to-end (E2E) test suite using **Cypress**, writt
 ├── package.json          # Project dependencies and scripts
 └── README.md             # Project documentation
  </pre>
+
+---
+
+## ⚙️ How to Run
+
+### 1. Clone the repository
+```
+git clone https://github.com/mashruf/AutomationExercise_E2E_Cypress.git
+
+cd AutomationExercise_E2E_Cypress
+
+```
+
+### 2. Install dependencies
+```
+npm install
+
+```
+### 3. Run tests
+
+#### Open Cypress UI:
+```
+npx cypress open
+
+```
+#### Run tests in terminal (headless):
+```
+npx cypress run
+
+```
+
+
+
+
+ 
 
