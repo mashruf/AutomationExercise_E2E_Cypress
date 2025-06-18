@@ -1,7 +1,7 @@
 {
   "name": "automationexercise_e2e_cypress",
   "version": "1.0.0",
-  "description": "E2E test using BDD approach",
+  "description": "E2E testing using BDD approach",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
