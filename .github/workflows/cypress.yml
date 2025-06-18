@@ -25,7 +25,7 @@ jobs:
       run: npm install -D allure-commandline@2.20.1
 
     - name: Generate Allure Report
-      run: npx allure generate allure-results --output allure-report --clean
+      run: npx allure generate allure-results --output allure-report --clean --report-title "AutomationExercise_E2E_Cypress BDD Report - Cucumber"
 
     - name: Deploy Allure report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
