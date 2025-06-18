@@ -22,7 +22,7 @@ jobs:
       continue-on-error: true  # ✅ allow next steps even if tests fail
 
     - name: Install Allure CLI
-      run: npm install -D allure-commandline@2.20.1
+      run: npm install -D allure-commandline@latest
 
     - name: Generate Allure Report
       run: npx allure generate allure-results --output allure-report --clean --report-title "AutomationExercise_E2E_Cypress BDD Report - Cucumber"
