@@ -23,7 +23,7 @@ This repository contains an end-to-end (E2E) test suite using **Cypress**, writt
 │   ├── e2e/              # BDD feature files and step definitions
 │   ├── fixtures/         # Test data files
 │   ├── support/          # Cypress commands and setup
-│   └── PageObjectModel/  # Page Object classes
+│   └── POM/  # Page Object classes
 ├── .github/workflows/    # GitHub Actions CI configuration
 ├── cypress.config.js     # Cypress configuration
 ├── package.json          # Project dependencies and scripts
