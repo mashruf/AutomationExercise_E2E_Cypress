@@ -69,6 +69,11 @@ npx cypress run
 
 ```
 
+---
+
+![screencapture-mashruf-github-io-AutomationExercise-E2E-Cypress-2025-06-18-22_13_01](https://github.com/user-attachments/assets/e356b198-e2db-4aca-a701-7298657769e2)
+
+
 
 
 
