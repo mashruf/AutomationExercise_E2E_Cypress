@@ -35,6 +35,7 @@ Then('I should see Logged in as username at the top',()=>{
 
 When('I add products to the cart',()=>{
     rt.addProductToCart("Blue Top");
+    rt.continueShopping();
 });
 
 When('I click the Cart button',()=>{
