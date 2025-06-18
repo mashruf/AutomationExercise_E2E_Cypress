@@ -10,6 +10,7 @@ This repository contains an end-to-end (E2E) test suite using **Cypress**, writt
 - Cucumber Preprocessor (Gherkin syntax)
 - JavaScript
 - GitHub Actions for CI/CD
+- Allure Report
 
 ---
 
