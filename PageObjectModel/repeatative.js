@@ -5,6 +5,10 @@ class Repeatative {
     email = faker.internet.email();//creating email for signup
     name = faker.person.firstName();//creating name for user
     password = "1234";
+    address = "Shapla 2";
+    phone = "1234567890";
+    zipcode = "1400";
+    country = "India";
 
     //verify the homepage is visible
     homePageVisible() {
@@ -40,12 +44,12 @@ class Repeatative {
         cy.get("#optin").check();
         cy.get("#first_name").type(this.name);
         cy.get("#last_name").type("Snow");
-        cy.get("#address1").type("Shapla 2");
-        cy.get("#country").select("India");
+        cy.get("#address1").type(this.address);
+        cy.get("#country").select(this.country);
         cy.get("#state").type("Rajsahi");
         cy.get("#city").type("Rajsahi");
-        cy.get("#zipcode").type("1400");
-        cy.get("#mobile_number").type("1234567890");
+        cy.get("#zipcode").type(this.zipcode);
+        cy.get("#mobile_number").type(this.phone);
         cy.get("button[data-qa='create-account']").click();
     }
 
