@@ -29,7 +29,7 @@ Then('I should see Write Your Review section',()=>{
 When('I enter name, email and review',()=>{
     cy.get("#name").type(rt.name);
     cy.get("#email").type(rt.email);
-    cy.get("#review").type("Hello World!");
+    cy.get("#review").type("Very good quality");
 });
 
 When('I click the Submit button',()=>{
